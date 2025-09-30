@@ -1,0 +1,181 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath, amssymb}
+\usepackage{geometry}
+\usepackage{enumitem}
+\geometry{letterpaper, margin=1in}
+
+\title{Guía de Estudio Completa\\ Análisis Senoidal Permanente de Circuitos Lineales}
+\author{}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\section*{Objetivo de la Práctica}
+Verificar en forma práctica las técnicas de análisis senoidal permanente empleando fasores.
+
+\section*{Contenido y Guía de Estudio}
+
+\subsection*{2.1 Concepto de la respuesta en estado senoidal permanente}
+Cuando un circuito lineal es excitado por una fuente senoidal, después de que los efectos transitorios desaparecen, el circuito responde con una señal senoidal de la misma frecuencia, aunque con diferente amplitud y fase. A esta condición se le llama \textbf{estado senoidal permanente}.
+
+\textbf{Definición: Estado Senoidal Permanente} \\
+Es la condición en la que todas las variables del circuito (corriente, voltaje) varían senoidalmente con la misma frecuencia que la fuente de excitación, pero pueden tener distintas amplitudes y fases.
+
+\textbf{Importancia:}
+\begin{itemize}
+    \item Permite analizar el comportamiento de los circuitos ante señales alternas.
+    \item Es fundamental para el diseño y análisis de sistemas eléctricos y electrónicos, como filtros, amplificadores y redes de comunicación.
+\end{itemize}
+
+\vspace{0.5cm}
+\subsubsection*{2.1.1 Concepto de fasor}
+
+\textbf{Definición:} Un \textbf{fasor} es una representación compleja de una magnitud senoidal, donde la magnitud y la fase están codificadas en un número complejo. 
+
+\begin{itemize}
+    \item Una función senoidal:
+    \[
+        v(t) = V_m \cos(\omega t + \phi)
+    \]
+    se representa como un fasor:
+    \[
+        \vec{V} = V_m \angle \phi
+    \]
+    o en forma exponencial:
+    \[
+        \vec{V} = V_m e^{j\phi}
+    \]
+    donde $V_m$ es la amplitud, $\phi$ el ángulo de fase, y $j = \sqrt{-1}$.
+    \item El fasor elimina la dependencia temporal y simplifica el análisis de circuitos.
+\end{itemize}
+
+\textbf{Propiedades de los fasores:}
+\begin{itemize}
+    \item Permiten sumar y restar senoidales de la misma frecuencia fácilmente.
+    \item Multiplicación por un escalar o por otro fasor sigue la aritmética compleja.
+    \item La derivada y la integral de una función senoidal en el dominio del tiempo se convierten en multiplicaciones y divisiones por $j\omega$ en el dominio fasorial.
+\end{itemize}
+
+\textbf{Comparaciones:}
+\begin{itemize}
+    \item \textbf{Dominio del tiempo:} Análisis con ecuaciones diferenciales.
+    \item \textbf{Dominio de fasores:} Análisis con álgebra compleja.
+\end{itemize}
+
+\vspace{0.5cm}
+\subsubsection*{2.1.2 Respuesta en estado senoidal permanente empleando fasores}
+
+El análisis en estado senoidal permanente mediante fasores se realiza siguiendo estos pasos:
+
+\begin{enumerate}[label=\arabic*.]
+    \item \textbf{Transformación a fasores:} Todas las fuentes y variables senoidales se convierten a su forma fasorial.
+    \item \textbf{Impedancias complejas:} Los elementos del circuito (R, L, C) se representan por sus impedancias complejas.
+    \item \textbf{Aplicación de leyes de circuito:} Se aplican las leyes de Kirchhoff, así como los métodos de mallas, nodos, etc., utilizando álgebra compleja.
+    \item \textbf{Solución algebraica:} Se resuelven las ecuaciones para obtener los fasores de las incógnitas.
+    \item \textbf{Transformación inversa:} Se convierte el resultado a la forma temporal:
+    \[
+        v(t) = V_m \cos(\omega t + \phi)
+    \]
+\end{enumerate}
+
+\textbf{Ejemplo:}
+Supón un circuito serie $RLC$ con una fuente $V(t) = V_m \cos(\omega t)$. El fasor de la fuente es $V_m \angle 0^\circ$ y la impedancia total es $Z = R + j(\omega L - 1/(\omega C))$. La corriente fasorial es:
+\[
+    \vec{I} = \frac{\vec{V}}{Z}
+\]
+La corriente en el tiempo será $i(t) = I_m \cos(\omega t + \phi)$ donde $I_m$ y $\phi$ provienen de la forma polar de $\vec{I}$.
+
+\vspace{0.5cm}
+\subsubsection*{2.1.3 Impedancia y admitancia complejas}
+
+\textbf{Definiciones:}
+\begin{itemize}
+    \item \textbf{Impedancia ($Z$):} Generalización de la resistencia eléctrica para señales alternas; mide la oposición al paso de la corriente alterna.
+    \item \textbf{Admitancia ($Y$):} Es la inversa de la impedancia; mide la facilidad con la que el circuito permite el paso de la corriente alterna.
+\end{itemize}
+
+\textbf{Impedancia de elementos básicos:}
+\begin{itemize}
+    \item \textbf{Resistor:} $Z_R = R$
+    \item \textbf{Inductor:} $Z_L = j\omega L$
+    \item \textbf{Capacitor:} $Z_C = \frac{1}{j\omega C} = -j \frac{1}{\omega C}$
+\end{itemize}
+
+\textbf{Admitancia de elementos básicos:}
+\begin{itemize}
+    \item \textbf{Resistor:} $Y_R = \frac{1}{R}$
+    \item \textbf{Inductor:} $Y_L = \frac{1}{j\omega L} = -j \frac{1}{\omega L}$
+    \item \textbf{Capacitor:} $Y_C = j\omega C$
+\end{itemize}
+
+\textbf{Interpretación geométrica:}
+\begin{itemize}
+    \item La impedancia se representa como un vector en el plano complejo, donde la parte real es la resistencia y la parte imaginaria es la reactancia.
+    \item La admitancia también es un número complejo, con parte real (conductancia) y parte imaginaria (susceptancia).
+\end{itemize}
+
+\textbf{Reactancia:}
+\begin{itemize}
+    \item \textbf{Inductiva:} $X_L = \omega L$ (positiva, adelanta la fase)
+    \item \textbf{Capacitiva:} $X_C = -\frac{1}{\omega C}$ (negativa, atrasa la fase)
+\end{itemize}
+
+\vspace{0.5cm}
+\subsubsection*{2.1.4 Respuesta en frecuencia}
+
+La \textbf{respuesta en frecuencia} consiste en analizar cómo varían la \textbf{amplitud} y la \textbf{fase} de la salida de un circuito respecto a la frecuencia de la señal de entrada.
+
+\begin{itemize}
+    \item \textbf{Función de transferencia:} 
+    \[
+        H(j\omega) = \frac{V_{out}(j\omega)}{V_{in}(j\omega)}
+    \]
+    \item \textbf{Magnitud:} $|H(j\omega)|$ indica la ganancia o atenuación a cada frecuencia.
+    \item \textbf{Fase:} $\angle H(j\omega)$ indica el desfase introducido por el circuito a la señal de entrada para cada frecuencia.
+\end{itemize}
+
+\textbf{Diagramas de Bode:}
+\begin{itemize}
+    \item Representan la magnitud (en dB) y la fase (en grados) contra la frecuencia (en escala logarítmica).
+    \item Permiten visualizar fácilmente el comportamiento del circuito ante distintas frecuencias.
+\end{itemize}
+
+\textbf{Ejemplo: Circuito RC serie}
+\begin{itemize}
+    \item Para la tensión sobre el capacitor:
+    \[
+        |V_C| = \frac{V_{in}}{\sqrt{1 + (\omega RC)^2}}
+    \]
+    \[
+        \phi = -\arctan(\omega RC)
+    \]
+    \item A bajas frecuencias, el capacitor se comporta como circuito abierto y $|V_C| \approx V_{in}$.
+    \item A altas frecuencias, el capacitor se comporta como corto y $|V_C| \approx 0$.
+\end{itemize}
+
+\vspace{0.5cm}
+\section*{Conceptos Clave y Consejos de Estudio}
+
+\begin{itemize}
+    \item \textbf{Fasor:} Representación compleja de una magnitud senoidal.
+    \item \textbf{Impedancia/admitancia:} Extienden el concepto de resistencia/conductancia a circuitos AC.
+    \item \textbf{Respuesta en frecuencia:} Analiza cómo el circuito responde a diferentes frecuencias.
+    \item Realiza conversiones entre dominio del tiempo y dominio fasorial.
+    \item Revisa y practica diagramas de Bode para distintos circuitos (RC, RL, RLC).
+    \item Resuelve ejercicios de circuitos usando análisis de mallas y nodos en AC.
+    \item Comprende el significado físico de fase y magnitud en señales alternas.
+    \item Familiarízate con la interpretación geométrica de números complejos.
+    \item Recuerda que las leyes de Kirchhoff aplican igual en el dominio fasorial.
+\end{itemize}
+
+\section*{Recursos Sugeridos}
+\begin{itemize}
+    \item Alexander, C. K. \& Sadiku, M. N. O. \textit{Fundamentals of Electric Circuits}.
+    \item Hayt, W. H., Kemmerly, J. E., \& Durbin, S. M. \textit{Análisis de circuitos en ingeniería}.
+    \item Apuntes y problemas de la asignatura, enfócate en los ejercicios propuestos.
+\end{itemize}
+
+\end{document}
