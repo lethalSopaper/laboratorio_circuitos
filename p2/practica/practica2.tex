@@ -13,14 +13,16 @@
 \usepackage{parskip} % Modifies paragraph spacing
 \usepackage{graphicx} % Enables the inclusion of graphics
 \usepackage{tikz} % Allows the creation of graphics and diagrams
-\usepackage{float}
+\usepackage{float} % Provides improved control over the placement of figures and tables
 \usepackage{hyperref} % Enables the creation of hyperlinks
 \usepackage{amsmath} % Provides additional math environments and commands
 \usepackage{circuitikz} % Allows the creation of electrical circuits
 \usepackage{adjustbox} % Adjusts the size of the circuit diagrams
 \usepackage{arydshln} % Allows the use of dashed lines in tables
+\usepackage{tcolorbox}
 
 \usetikzlibrary{shapes.geometric, positioning}
+\definecolor{mygray}{gray}{0.9}
 
 \lstset{
 	language=SQL,
@@ -115,8 +117,8 @@
 
 		\Huge
 		Ugartechea González Luis Antonio\\
-		Tepal Brinseño Hansel Yael \\
-		\textbf{Fecha de entrega:} 
+		Tepal Brinseño Hansel Yael\\
+		\textbf{Fecha de entrega:} 30 de septiembre de 2025
 		\vspace{2.5cm}
 	\end{center}
 
@@ -128,21 +130,18 @@
 	\item Verificar en forma práctica las técnicas de análisis senoidal permanente, empleando fasores.
 \end{itemize}
 
-\section{Marco Teórico}
+\section{Introducción}
 
-\begin{itemize}
-	\item \textbf{Fasor:} Representación compleja de una magnitud sinusoidal, utilizada en el análisis de circuitos eléctricos para simplificar cálculos.
-	\item \textbf{Función de transferencia:} El cociente entre la transformada de Laplace de la salida y la transformada de Laplace de la entrada de un sistema, bajo la condición de que todas las condiciones iniciales sean cero.
-\end{itemize}
+En el análisis de circuitos eléctricos, es fundamental comprender los conceptos de fasores y funciones de transferencia, ya que permiten simplificar y modelar el comportamiento de sistemas lineales ante señales sinusoidales. El uso de fasores facilita la representación compleja de magnitudes sinusoidales, mientras que la función de transferencia describe la relación entre la entrada y la salida de un sistema en el dominio de Laplace, bajo condiciones iniciales nulas.
 
 \section{Desarrollo}
 
-\subsection*{Circuito RL}
+\subsection*{Experimento 1. Circuito RL}
 
 \begin{figure}[H]
 	\centering
-	\includegraphics
-	\caption{Circuito RL}[width=0.5\textwidth]{figure_1.png}
+	\includegraphics[width=0.5\textwidth]{figure_1.png}
+	\caption{Circuito RL}
 \end{figure}
 
 \subsubsection*{Función de Transferencia}
@@ -179,11 +178,19 @@
 	\item \textbf{Señal de entrada:} \(5 sen (\omega t)\)
 	\item \textbf{\(\omega\):} \(4000 \pi \, rad/s\)
 	\item \textbf{Frecuencia:} \(f = 2 kHz\)
-	\item \textbf{Resistencia de la fuente:} \(50 \omega\)
+	\item \textbf{Resistencia de la fuente:} \(50 \Omega\)
 	\item \textbf{Inductancia:} \(L =  72 mH\)
 	\item \textbf{resistencia del inductor:} \(R_L = 72.7 \Omega\)
 	\item \textbf{Resistencia:} \(R = 200 \Omega\)
 \end{itemize}
+
+\subsection*{Osciloscopio}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\textwidth]{e2_1.jpg}
+	\caption{Osciloscopio circuito RL}
+\end{figure}
 
 \subsubsection*{Medidas prácticas}
 
@@ -191,6 +198,8 @@
 	\item \textbf{Ángulo de desfasamiento:} \(\Theta = \frac{1 [cuadro]\cdot (360°)}{5 [cuadros]} = 72°\)
 	\item \textbf{Desfasamiento medido con cursor del osciloscopio:} \(71.2°\)
 \end{itemize}
+
+\subsection*{Cálculo de \(L\) con cuadros}
 
 Despejamos \(L\):
 
@@ -201,8 +210,12 @@ L = \frac{R_{eq}}{\omega} \cdot \tan(\Theta)
 Sustituimos para obtener \(L\):
 
 \[
-L = \frac{200 \Omega + 72.7 \Omega + 50 \Omega}{4000 \pi \, [\frac{rad}{s}]} \cdot \tan(72°) \approx 79.8 mH
+L = \frac{200 \Omega + 72.7 \Omega + 50 \Omega}{4000 \pi \, [\frac{rad}{s}]} \cdot \tan(72°) \approx 78.9 mH
 \]
+
+\begin{tcolorbox}[colback=mygray, colframe=LimeGreen, boxrule=0.7pt, arc=2pt, boxsep=1pt, left=2pt, right=2pt, top=2pt, bottom=2pt, title=Medida del inductor con cuadros]
+\(L \approx 78.9 mH\)
+\end{tcolorbox}
 
 \textbf{Error porcentual:}
 
@@ -210,10 +223,30 @@ L = \frac{200 \Omega + 72.7 \Omega + 50 \Omega}{4000 \pi \, [\frac{rad}{s}]} \cd
 \text{Error} = \left| \frac{L_{teorico} - L_{practico}}{L_{teorico}} \right| \cdot 100\%
 \]
 \[
-\text{Error} = \left| \frac{79.8 mH - 72 mH}{72 mH} \right| \cdot 100\% \approx 10.83\%
+\text{Error} = \left| \frac{78.9 mH - 72 mH}{72 mH} \right| \cdot 100\% = 9.58\%
 \]
 
-\subsection*{Circuito RC}
+\begin{tcolorbox}[colback=mygray, colframe=LimeGreen, boxrule=0.7pt, arc=2pt, boxsep=1pt, left=2pt, right=2pt, top=2pt, bottom=2pt, title=Error porcentual]
+\(E\% = 9.58\%\)
+\end{tcolorbox}
+
+\subsection*{Cálculo de \(L\) con cursor}
+
+Sustituimos para obtener \(L\):
+
+\[
+L = \frac{200 \Omega + 72.7 \Omega + 50 \Omega}{4000 \pi \, [\frac{rad}{s}]} \cdot \tan(71.2°) \approx 75.3 mH
+\]
+
+\begin{tcolorbox}[colback=mygray, colframe=LimeGreen, boxrule=0.7pt, arc=2pt, boxsep=1pt, left=2pt, right=2pt, top=2pt, bottom=2pt, title=Medida del inductor con cursor]
+\(L \approx 75.3 mH\)
+\end{tcolorbox}
+
+\textbf{Error porcentual:}
+
+\[\text{Error} = \left| \frac{75.3 mH - 72 mH}{72 mH} \right| \cdot 100\% = 4.58\%\]
+
+\subsection*{Experimento 2. Circuito RC}
 
 \begin{figure}[H]
 	\centering
@@ -262,6 +295,12 @@ L = \frac{200 \Omega + 72.7 \Omega + 50 \Omega}{4000 \pi \, [\frac{rad}{s}]} \cd
 	\item \textbf{Resistencia:} \(R = 500 \Omega\)
 \end{itemize}
 
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\textwidth]{e2.jpg}
+	\caption{Osciloscopio circuito RC}
+\end{figure}
+
 \subsubsection*{Medidas prácticas}
 
 \begin{itemize}
@@ -280,16 +319,24 @@ Sustituimos para obtener \(C\):
 C = \frac{1}{500 \Omega + 50 \Omega} \cdot \tan(56.1°) \approx 0.21 [\mu F]
 \]
 
+\begin{tcolorbox}[colback=mygray, colframe=LimeGreen, boxrule=0.7pt, arc=2pt, boxsep=1pt, left=2pt, right=2pt, top=2pt, bottom=2pt, title=Medida del capacitor con cursor]
+\(C \approx 0.21 [\mu F]\)
+\end{tcolorbox}
+
 \textbf{Error porcentual:}
 
 \[
 \text{Error} = \left| \frac{C_{teorico} - C_{practico}}{C_{teorico}} \right| \cdot 100\%
 \]
 \[
-\text{Error} = \left| \frac{0.22 [\mu F] - 0.21 [\mu F]}{0.22 [\mu F]} \right| \cdot 100\% \approx 4.54\%
+\text{Error} = \left| \frac{0.22 [\mu F] - 0.21 [\mu F]}{0.22 [\mu F]} \right| \cdot 100\% = 4.54\%
 \]
 
-\subsection*{Circuito RC invertido}
+\begin{tcolorbox}[colback=mygray, colframe=LimeGreen, boxrule=0.7pt, arc=2pt, boxsep=1pt, left=2pt, right=2pt, top=2pt, bottom=2pt, title=Error porcentual]
+\(E\% = 4.54\%\)
+\end{tcolorbox}
+
+\subsection*{Experimento 3.Circuito RC invertido}
 
 \subsubsection*{Ángulo de fase}
 
@@ -334,20 +381,28 @@ Sustituimos para obtener \(C\):
 C = \frac{1}{(50\Omega + 500\Omega) 4000 \pi \, \left[\frac{rad}{s} \right]\cdot \tan(36.8°)} \approx 0.19[\mu F]
 \]
 
+\begin{tcolorbox}[colback=mygray, colframe=LimeGreen, boxrule=0.7pt, arc=2pt, boxsep=1pt, left=2pt, right=2pt, top=2pt, bottom=2pt, title=Medida del capacitor con cursor]
+\(C \approx 0.19 [\mu F]\)
+\end{tcolorbox}
+
 \textbf{Error porcentual:}
 
 \[
 \text{Error} = \left| \frac{C_{teorico} - C_{practico}}{C_{teorico}} \right| \cdot 100\%
 \]
 \[
-\text{Error} = \left| \frac{0.22 [\mu F] - 0.19 [\mu F]}{0.22 [\mu F]} \right| \cdot 100\% \approx 15.78\%
+\text{Error} = \left| \frac{0.22 [\mu F] - 0.19 [\mu F]}{0.22 [\mu F]} \right| \cdot 100\% = 15.78\%
 \]
+
+\begin{tcolorbox}[colback=mygray, colframe=LimeGreen, boxrule=0.7pt, arc=2pt, boxsep=1pt, left=2pt, right=2pt, top=2pt, bottom=2pt, title=Error porcentual]
+\(E\% = 15.78\%\)
+\end{tcolorbox}
 
 \subsubsection*{Observacion entre circuitos RC}
 
 A diferencia del circuito anterior al colocar el capacitor primero vemos que ahora está adelanta con respecto a la señal de entrada.
 
-\subsection*{Circuito RLC}
+\subsection*{Experimento 4. Circuito RLC}
 
 \begin{figure}[H]
 	\centering
@@ -369,7 +424,6 @@ A diferencia del circuito anterior al colocar el capacitor primero vemos que aho
 \Theta = 21.59° - 38.30° = -16.71°
 \]
 
-
 \subsubsection*{Datos de Practica}
 
 \begin{itemize}
@@ -384,7 +438,23 @@ A diferencia del circuito anterior al colocar el capacitor primero vemos que aho
 	\item \textbf{Resistencia:} \(R_2 = 500 \Omega\)
 \end{itemize}
 
-\subsection*{Experimento 3}
+En este ultimo expermiento no se midió nada ya que los osciloscopios proporcionaban muco ruido en el canal 2 pero logramos observar que al invertir la señal de salida era igual a la de entrada.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\textwidth]{e4.jpg}
+	\caption{Osciloscopio circuito RLC}
+\end{figure}
+
+\subsection*{Conclusiones}
+
+\subsubsection*{Tepal Brinseño Hansel Yael}
+
+Pudimos observar que en el circuito RL la señal de salida se atrasa respecto a la entrada debido a la presencia del inductor, el cual se opone a los cambios de corriente. Este atraso fue de aproximadamente 71.2°, confirmando la naturaleza inductiva del circuito. En los circuitos RC se vió la diferencia entre las configuraciones cuando se mide la salida en el capacitor y cuando se invierte. Los errores porcentuales obtenidos (4.58\% para el inductor y 4.54\% para el capacitor en configuración pasa-bajos) validan la precisión del método fasorial para el análisis de circuitos en régimen senoidal permanente.
+
+\subsubsection*{Ugartechea González Luis Antonio}
+
+El análisis fasorial demostró ser una herramienta eficaz para predecir y verificar el comportamiento de circuitos lineales ante señales sinusoidales. Los inductores introducen un atraso de fase en la señal de salida debido a su impedancia reactiva positiva, lo que provoca que la corriente se atrase respecto al voltaje aplicado, mientras que los capacitores pueden causar adelanto o atraso dependiendo de su configuración. En configuración pasa-bajos (RC) la señal se atrasa, y en configuración pasa-altos (CR) la señal se adelanta, debido a la impedancia reactiva negativa del capacitor. La precisión de las mediciones mejoró significativamente al utilizar los cursores del osciloscopio en lugar del método de conteo de cuadros, reduciendo el error del 9.58\% al 4.58\% en el caso del inductor.
 
 
 
