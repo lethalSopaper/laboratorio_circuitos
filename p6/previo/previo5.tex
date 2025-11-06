@@ -141,6 +141,185 @@
 	\label{fig:circuito1_1}
 \end{figure}
 
+De acuerdo al circuito obtenemos el análisis de mallas y de nodos:
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.5\textwidth]{circuito1_p1_edited.png}
+	\caption{Circuito con mallas y nodos}
+	\label{fig:circuito1_1}
+\end{figure}
+
+\textbf{De la malla 1 tenemos:}
+
+\(E = V_{R_1} + V_{2} \Rightarrow V_{2} = E - V_{R_1}\)
+
+Sustituyendo valores:
+
+\begin{equation}
+V_{2} = 12V - R_1(i_1)
+\label{eq:eq1}
+\end{equation}
+
+\textbf{De la malla 2 tenemos:}
+
+\(V_{R_2} = E_1 + V_{R_6}\)
+
+Sustituyendo valores:
+
+\(V_{R_2} = 9V + R_6(i_5)\)
+
+Con esta ecuacion lo sumamos para obtener \(V_{2}\):
+
+\(V_{2} = V_{R_2} + V_{R_5}\)
+
+Tenemos que:
+
+\begin{equation}
+V_{2} = 9V + R_6(i_5) + R_5(i_3)
+\label{eq:eq2}
+\end{equation}
+
+\begin{equation}
+V_{2} = R_2(i_4) + R_5(i_3)
+\label{eq:eq3}
+\end{equation}
+
+\textbf{De la malla 3 tenemos:}
+
+\(V_{2} = V_{R_3} + V_{R_4}\)
+
+Sustituyendo valores:
+
+\begin{equation}
+V_{2} = (i_2)(R_3 + R_4)
+\label{eq:eq4}
+\end{equation}
+
+\textbf{Del nodo a tenemos:}
+
+\begin{equation}
+i_1 = i_2 + i_3
+\label{eq:eq5}
+\end{equation}
+
+\textbf{Del nodo c tenemos:}
+
+\begin{equation}
+i_3 = i_4 + i_5
+\label{eq:eq6}
+\end{equation}
+
+Con la ecuacion \ref{eq:eq5} despejamos \(i_3\):
+
+\begin{equation}
+i_3 = i_1 - i_2
+\label{eq:eq7}
+\end{equation}
+
+Despejando \(i_1\) de la ecuacion \ref{eq:eq1} tenemos:
+
+\(i_1 = \frac{12V - V_2}{R_1} = \frac{12V - V_2}{1000 \Omega}\)
+
+Despejando \(i_2\) de la ecuacion \ref{eq:eq4} tenemos:
+
+\(i_2 = \frac{V_2}{R_3+R_4} = \frac{V_2}{1000 \Omega + 10000 \Omega} = \frac{V_2}{11000 \Omega}\)
+
+Sustituyendo \(i_1\) e \(i_2\) en la ecuacion \ref{eq:eq7}:
+
+\begin{equation}
+i_3 = \frac{12V - V_2}{1000 \Omega} - \frac{V_2}{11000 \Omega}
+\label{eq:eq8}
+\end{equation}
+
+Despejando \(i_5\) de la ecuacion \ref{eq:eq2} tenemos:
+
+\(i_5 = \frac{V_2 - 9V - R_5(i_3)}{R_6} = \frac{V_2 - 9V - 1000 \Omega (i_3)}{10000 \Omega}\)
+
+Sustituyendo \(i_3\) de la ecuacion \ref{eq:eq8} en la ecuacion anterior:
+
+\(i_5 = \frac{V_2 - 9V - 1000 \Omega \left( \frac{12V - V_2}{1000 \Omega} - \frac{V_2}{11000 \Omega} \right)}{10000 \Omega}\)
+
+Desarrollando tenemos:
+
+\(i_5 = \frac{-21V+\frac{V_2}{11}}{10000 \Omega}\)
+
+\begin{equation}
+i_5 = \frac{V_2}{110000 \Omega} - \frac{21V}{10000 \Omega}
+\label{eq:eq9}
+\end{equation}
+
+Despejando \(i_4\) de la ecuacion \ref{eq:eq3} tenemos:
+
+\(i_4 = \frac{V_2 - R_5(i_3)}{R_2} = \frac{V_2 - 1000 \Omega (i_3)}{10000 \Omega}\)
+
+Sustituyendo \(i_3\) de la ecuacion \ref{eq:eq8} en la ecuacion anterior:
+
+\(i_4 = \frac{V_2 - 1000 \Omega \left( \frac{12V - V_2}{1000 \Omega} - \frac{V_2}{11000 \Omega} \right)}{10000 \Omega}\)
+
+Desarrollando tenemos:
+
+\(i_4 = \frac{-12V + \frac{V_2}{11}}{10000 \Omega}\)
+
+\begin{equation}
+i_4 = \frac{V_2}{110000 \Omega} - \frac{12V}{10000 \Omega}
+\label{eq:eq10}
+\end{equation}
+
+Sustituyendo \(i_3\), \(i_4\) y \(i_5\) en la ecuacion \ref{eq:eq6}:
+
+\(\frac{12V - V_2}{1000 \Omega} - \frac{V_2}{11000 \Omega} = \frac{V_2}{110000 \Omega} - \frac{12V}{10000 \Omega} +\frac{V_2}{110000 \Omega} - \frac{21V}{10000 \Omega}\)
+
+\(\frac{12V}{1000 \Omega} - \frac{V_2}{1000 \Omega} - \frac{V_2}{11000 \Omega} = \frac{V_2}{110000 \Omega} - \frac{12V}{10000 \Omega} +\frac{V_2}{110000 \Omega} - \frac{21V}{10000 \Omega}\)
+
+\(12V - V_2 - \frac{V_2}{11} = \frac{V_2}{110} - 1.2V +\frac{V_2}{110} - 2.1V\)
+
+\(- V_2 - \frac{V_2}{11} - \frac{V_2}{110} -\frac{V_2}{110} = - 1.2V - 2.1V - 12V \)
+
+\(\frac{61}{55} \cdot V_2 = 15.3\)
+
+Despejando \(V_2\):
+
+\(V_2 = \frac{15.3(55)}{61}\)
+
+\begin{tcolorbox}[colback=mygray, colframe=LimeGreen, boxrule=0.7pt, arc=2pt, boxsep=1pt, left=2pt, right=2pt, top=2pt, bottom=2pt, title=Resultado para \(V_2\)]
+\[V_2 \approx 9 V\]
+\end{tcolorbox}
+
+Con \(V_2\) podemos calcular los demas voltajes:
+
+Calculando \(V_1\):
+
+\(V_1 = E - V_2 = 12V - 9V = 3V\)
+
+\begin{tcolorbox}[colback=mygray, colframe=LimeGreen, boxrule=0.7pt, arc=2pt, boxsep=1pt, left=2pt, right=2pt, top=2pt, bottom=2pt, title=Resultado para \(V_1\)]
+\[V_1 = 3 V\]
+\end{tcolorbox}
+
+Calculando \(V_3\):
+
+\(V_2 = V_3 + V_4\)
+
+Calculando la corriente \(i_2\):
+
+\(i_2 = \frac{V_2}{R_3 + R_4} = \frac{9V}{1000 \Omega + 10000 \Omega} = \frac{9V}{11000 \Omega} = 0.00081818 A\)
+
+Calculando \(V_3\):
+
+\(V_3 = R_3(i_2) = 1000 \Omega (0.00081818 A) = 0.81818 V\)
+
+\begin{tcolorbox}[colback=mygray, colframe=LimeGreen, boxrule=0.7pt, arc=2pt, boxsep=1pt, left=2pt, right=2pt, top=2pt, bottom=2pt, title=Resultado para \(V_3\)]
+\[V_3 = 0.81818 V\]
+\end{tcolorbox}
+
+Calculando \(V_4\):
+
+\(V_4 = R_4(i_2) = 10000 \Omega (0.00081818 A) = 8.1818 V\)
+
+\begin{tcolorbox}[colback=mygray, colframe=LimeGreen, boxrule=0.7pt, arc=2pt, boxsep=1pt, left=2pt, right=2pt, top=2pt, bottom=2pt, title=Resultado para \(V_4\)]
+\[V_4 = 8.1818 V\]
+\end{tcolorbox}
+
 \section{Determine los voltajes \(V_1\), \(V_2\), \(V_3\) y \(V_4\) del circuito de la figura \ref{fig:circuito1_2}}
 
 \begin{figure}[H]
@@ -149,6 +328,55 @@
 	\caption{Circuito a analizar}
 	\label{fig:circuito1_2}
 \end{figure}
+
+De acuerdo con el circuito \ref{fig:circuito1_2}, vemos que la Batería de 9V está en paralelo con \(V_2\), por lo tanto:
+
+\begin{tcolorbox}[colback=mygray, colframe=LimeGreen, boxrule=0.7pt, arc=2pt, boxsep=1pt, left=2pt, right=2pt, top=2pt, bottom=2pt, title=Resultado para \(V_2\)]
+\[V_2 = 9 V\]
+\end{tcolorbox}
+
+De igual forma para \(V_1\):
+
+Tenemos la batería en paralelo con \(Y\) y \(V_1\), por lo tanto:
+
+\(9V = E - V_1\)
+
+Sustituyendo \(E\):
+
+\(9V = 12V - V_1\)
+
+Despejando \(V_1\):
+
+\(V_1 = 12V - 9V = 3V\)
+
+\begin{tcolorbox}[colback=mygray, colframe=LimeGreen, boxrule=0.7pt, arc=2pt, boxsep=1pt, left=2pt, right=2pt, top=2pt, bottom=2pt, title=Resultado para \(V_1\)]
+\[V_1 = 3 V\]
+\end{tcolorbox}
+
+Para \(V_3\) y \(V_4\) utilizamos el mismo principio ya que está en paralelo con la batería de 9V, por lo tanto:
+
+\(9V = V_3 + V_4 = R_3(i) + R_4(i) = (R_3 + R_4)(i)\)
+
+Despejando la corriente \(i\) y sustituyendo \(R_3\) y \(R_4\):
+
+\(i = \frac{9V}{1000 + 10000}\)
+
+\(i = \frac{9V}{11000 \Omega} = 0.00081818 A\)
+
+Calculando \(V_3\):
+
+\(V_3 = R_3(i) = 1000 \Omega (0.00081818 A) = 0.81818 V\)
+
+\begin{tcolorbox}[colback=mygray, colframe=LimeGreen, boxrule=0.7pt, arc=2pt, boxsep=1pt, left=2pt, right=2pt, top=2pt, bottom=2pt, title=Resultado para \(V_3\)]
+\[V_3 = 0.81818 V\]
+\end{tcolorbox}
+
+Calculando \(V_4\):
+
+\(V_4 = R_4(i) = 10000 \Omega (0.00081818 A) = 8.1818 V\)
+\begin{tcolorbox}[colback=mygray, colframe=LimeGreen, boxrule=0.7pt, arc=2pt, boxsep=1pt, left=2pt, right=2pt, top=2pt, bottom=2pt, title=Resultado para \(V_4\)]
+\[V_4 = 8.1818 V\]
+\end{tcolorbox}
 
 \section{Determine los voltajes \(V_1\), \(V_2\), \(V_3\) y \(V_4\) del circuito de la figura \ref{fig:circuito1_3}}
 
@@ -159,7 +387,56 @@
 	\label{fig:circuito1_3}
 \end{figure}
 
+Como vemos en el circuito \ref{fig:circuito1_3}, el voltaje \(V_2\) es el voltaje de la batería, por lo tanto:
+
+\begin{tcolorbox}[colback=mygray, colframe=LimeGreen, boxrule=0.7pt, arc=2pt, boxsep=1pt, left=2pt, right=2pt, top=2pt, bottom=2pt, title=Resultado para \(V_2\)]
+\[V_2 = 9 V\]
+\end{tcolorbox}
+
+Para \(V_1\) tenemos que:
+
+\(V_1 + V_2 = E\)
+
+Sustituyendo \(E\) y \(V_2\):
+
+\(V_1 + 9V = 12V\)
+
+Despejando \(V_1\):
+
+\(V_1 = 12V - 9V = 3V\)
+
+\begin{tcolorbox}[colback=mygray, colframe=LimeGreen, boxrule=0.7pt, arc=2pt, boxsep=1pt, left=2pt, right=2pt, top=2pt, bottom=2pt, title=Resultado para \(V_1\)]
+\[V_1 = 3 V\]
+\end{tcolorbox}
+
+Para \(V_3\) y \(V_4\) utilizamos el mismo principio ya que está en paralelo con la batería de 9V, por lo tanto:
+
+\(9V = V_3 + V_4 = R_3(i) + R_4(i) = (R_3 + R_4)(i)\)
+
+Despejando la corriente \(i\) y sustituyendo \(R_3\) y \(R_4\):
+
+\(i = \frac{9V}{1000 + 10000}\)
+
+\(i = \frac{9V}{11000 \Omega} = 0.00081818 A\)
+
+Calculando \(V_3\):
+
+\(V_3 = R_3(i) = 1000 \Omega (0.00081818 A) = 0.81818 V\)
+
+\begin{tcolorbox}[colback=mygray, colframe=LimeGreen, boxrule=0.7pt, arc=2pt, boxsep=1pt, left=2pt, right=2pt, top=2pt, bottom=2pt, title=Resultado para \(V_3\)]
+\[V_3 = 0.81818 V\]
+\end{tcolorbox}
+
+Calculando \(V_4\):
+
+\(V_4 = R_4(i) = 10000 \Omega (0.00081818 A) = 8.1818 V\)
+\begin{tcolorbox}[colback=mygray, colframe=LimeGreen, boxrule=0.7pt, arc=2pt, boxsep=1pt, left=2pt, right=2pt, top=2pt, bottom=2pt, title=Resultado para \(V_4\)]
+\[V_4 = 8.1818 V\]
+\end{tcolorbox}
+
 \section{¿Qué se puede concluir?}
+
+Esto demuestra que podemos sustituir completamente una rama de un circuito por una batería de voltaje igual a la caída de voltaje en esa rama sin alterar el comportamiento del circuito en los demás nodos. Esto es útil para simplificar el análisis de circuitos complejos al reducir el número de componentes que deben considerarse directamente.
 
 \section{Determine para el circuito para la figura \ref{fig:circuito2_1} la diferencia de potencial \(V_{ab}\)}
 
@@ -176,17 +453,17 @@ Utilizando Ley de corriente de Kirchhoff en el nodo \(a\):
 
 utilizando ley de ohm para cada resistencia:
 
-\[I_1 = \frac{V_a - 9 V}{1000 \omega}\]
+\[I_1 = \frac{V_a - 9 V}{1000 \Omega}\]
 
-\[I_2 = \frac{V_a - 9 V}{1000 \omega}\]
+\[I_2 = \frac{V_a - 9 V}{1000 \Omega}\]
 
-\[I_3 = \frac{Va - V_b}{10000 \omega}\]
+\[I_3 = \frac{Va - V_b}{10000 \Omega}\]
 
 Suponiendo que el voltaje \(V_b = 0\)
 
-\[\frac{V_a - 9 V}{1000 \omega} + \frac{V_a - 9 V}{1000 \omega} = \frac{V_a}{10000 \omega}\]
+\[\frac{V_a - 9 V}{1000 \Omega} + \frac{V_a - 9 V}{1000 \Omega} = \frac{V_a}{10000 \Omega}\]
 
-Multiplicando por \(10000 \omega\) para eliminar los denominadores:
+Multiplicando por \(10000 \Omega\) para eliminar los denominadores:
 
 \[10 (V_a - 9 V) + 10 (V_a - 9 V) = V_a\]
 
@@ -196,7 +473,9 @@ Multiplicando por \(10000 \omega\) para eliminar los denominadores:
 
 \[V_a = 8.5714\]
 
-por lo tanto el voltaje \(V_{ab} = 8.5714 V\)
+\begin{tcolorbox}[colback=mygray, colframe=LimeGreen, boxrule=0.7pt, arc=2pt, boxsep=1pt, left=2pt, right=2pt, top=2pt, bottom=2pt, title=Resultado para \(V_{ab}\)]
+\(V_{ab} = 8.5714 V\)
+\end{tcolorbox}
 
 \section{Determine para el circuito para la figura \ref{fig:circuito2_2} la diferencia de potencial \(V_{a'b'}\)}
 
@@ -209,11 +488,11 @@ por lo tanto el voltaje \(V_{ab} = 8.5714 V\)
 
 Utilizando Divisor de voltaje, simplificamos la resistencia de lado izquierdo que esta en paralelo con la resistencia central:
 
-\[R_{eq1} = \frac{1 k \omega \cdot 10 k \omega}{1 k \omega + 10 k \omega} = \frac{10 k \omega}{11 k \omega}\]
+\[R_{eq1} = \frac{1 k \Omega \cdot 10 k \Omega}{1 k \Omega + 10 k \Omega} = \frac{10 k \Omega}{11 k \Omega}\]
 
 Encontrando la resistencia equivalente sumamos la resistencia obtenida con la que se encuntra en serie:
 
-\[R_{eq} = 1 k \omega + \frac{10 k \omega}{11 k \omega} = \frac{21}{11}\]
+\[R_{eq} = 1 k \Omega + \frac{10 k \Omega}{11 k \Omega} = \frac{21}{11}\]
 
 Utilizando la formula de divisor de voltaje tenemos:
 
@@ -224,6 +503,10 @@ Utilizando la formula de divisor de voltaje tenemos:
 \[V_{a'b'} = \frac{10 k \Omega}{21 k \Omega} \cdot 9 V\]
 
 \[V_{a'b'} = \frac{90}{21} V = 4.2857 V\]
+
+\begin{tcolorbox}[colback=mygray, colframe=LimeGreen, boxrule=0.7pt, arc=2pt, boxsep=1pt, left=2pt, right=2pt, top=2pt, bottom=2pt, title=Resultado para \(V_{a'b'}\)]
+\[V_{a'b'} = 4.2857 V\]
+\end{tcolorbox}
 
 \section{Determine para el circuito para la figura \ref{fig:circuito2_3} la diferencia de potencial \(V_{a''b''}\)}
 
@@ -241,6 +524,10 @@ Ya que este circuito es exactamente igual al inciso anterior, siendo la unica di
 
 \[V_{a''b''} = \frac{90}{21} V = 4.2857 V\]
 
+\begin{tcolorbox}[colback=mygray, colframe=LimeGreen, boxrule=0.7pt, arc=2pt, boxsep=1pt, left=2pt, right=2pt, top=2pt, bottom=2pt, title=Resultado para \(V_{a''b''}\)]
+\[V_{a''b''} = 4.2857 V\]
+\end{tcolorbox}
+
 \section{Verifique con los resultados anteriores que \(V_{ab} = V_{a'b'} + V_{a''b''}\)}
 
 Sabemos que:
@@ -257,7 +544,11 @@ V_{a''b''} &= 4.2857\ \mathrm{V}
 
 \[8.5714\ \mathrm{V} = 4.2857\ \mathrm{V} + 4.2857\ \mathrm{V}\]
 
-Por lo tanto queda demostrado.
+\begin{tcolorbox}[colback=mygray, colframe=LimeGreen, boxrule=0.7pt, arc=2pt, boxsep=1pt, left=2pt, right=2pt, top=2pt, bottom=2pt, title=Demostración de Superposición]
+\[8.5714\ \mathrm{V} = 8.5714\ \mathrm{V}\]
+\end{tcolorbox}
+
+\textcolor{LimeGreen}{Por lo tanto queda demostrado.}
 
 \section{Para el circuito de la figura \ref{fig:circuito3_1}, desarrolle las siguientes ecuaciones}
 
@@ -296,10 +587,11 @@ Ahora para calcular \( \sum_{k=1}^{b} j_{k} V_{k} \) debemos de calcular la pote
 
 Por lo tanto tenemos que:
 
-\[\
+\begin{tcolorbox}[colback=mygray, colframe=LimeGreen, boxrule=0.7pt, arc=2pt, boxsep=1pt, left=2pt, right=2pt, top=2pt, bottom=2pt, title=Resultado de la ecuación desarrollada]
+\[
 \sum_{k=1}^{b} j_{k} V_{k} = j_1 V_1 + V_2 (j_2 - j_1) - j_2 V_3 + V_4 (j_3 - j_2) - j_3 V_5
 \]
-
+\end{tcolorbox}
 
 % \begin{thebibliography}{9}
 % \section{Bibliografía}
