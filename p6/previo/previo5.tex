@@ -170,6 +170,34 @@
 	\label{fig:circuito2_1}
 \end{figure}
 
+Utilizando Ley de corriente de Kirchhoff en el nodo \(a\):
+
+\[I_1 + I_2 = I_3\]
+
+utilizando ley de ohm para cada resistencia:
+
+\[I_1 = \frac{V_a - 9 V}{1000 \omega}\]
+
+\[I_2 = \frac{V_a - 9 V}{1000 \omega}\]
+
+\[I_3 = \frac{Va - V_b}{10000 \omega}\]
+
+Suponiendo que el voltaje \(V_b = 0\)
+
+\[\frac{V_a - 9 V}{1000 \omega} + \frac{V_a - 9 V}{1000 \omega} = \frac{V_a}{10000 \omega}\]
+
+Multiplicando por \(10000 \omega\) para eliminar los denominadores:
+
+\[10 (V_a - 9 V) + 10 (V_a - 9 V) = V_a\]
+
+\[20 (V_a - 9 V) = V_a\]
+
+\[21 V_a = 180 \]
+
+\[V_a = 8.5714\]
+
+por lo tanto el voltaje \(V_{ab} = 8.5714 V\)
+
 \section{Determine para el circuito para la figura \ref{fig:circuito2_2} la diferencia de potencial \(V_{a'b'}\)}
 
 \begin{figure}[H]
@@ -179,7 +207,26 @@
 	\label{fig:circuito2_2}
 \end{figure}
 
+Utilizando Divisor de voltaje, simplificamos la resistencia de lado izquierdo que esta en paralelo con la resistencia central:
+
+\[R_{eq1} = \frac{1 k \omega \cdot 10 k \omega}{1 k \omega + 10 k \omega} = \frac{10 k \omega}{11 k \omega}\]
+
+Encontrando la resistencia equivalente sumamos la resistencia obtenida con la que se encuntra en serie:
+
+\[R_{eq} = 1 k \omega + \frac{10 k \omega}{11 k \omega} = \frac{21}{11}\]
+
+Utilizando la formula de divisor de voltaje tenemos:
+
+\[V_{a'b'} = \frac{R_{eq1}}{R_{eq}} \cdot 9 V\]
+
+\[V_{a'b'} = \frac{\frac{10}{11}K \Omega}{\frac{21}{11} k \Omega} \cdot 9 V\]
+
+\[V_{a'b'} = \frac{10 k \Omega}{21 k \Omega} \cdot 9 V\]
+
+\[V_{a'b'} = \frac{90}{21} V = 4.2857 V\]
+
 \section{Determine para el circuito para la figura \ref{fig:circuito2_3} la diferencia de potencial \(V_{a''b''}\)}
+
 
 \begin{figure}[H]
 	\centering
@@ -188,7 +235,29 @@
 	\label{fig:circuito2_3}
 \end{figure}
 
+Ya que este circuito es exactamente igual al inciso anterior, siendo la unica diferencia que la fuente cambia de ubicación. El cálculo para determinar la diferencia de potencia \(V_{a''b''}\) es exactamente el mismo por lo que:
+
+\[V_{a''b''} = \frac{10 k \Omega}{21 k \Omega} \cdot 9 V\]
+
+\[V_{a''b''} = \frac{90}{21} V = 4.2857 V\]
+
 \section{Verifique con los resultados anteriores que \(V_{ab} = V_{a'b'} + V_{a''b''}\)}
+
+Sabemos que:
+
+\[
+\begin{aligned}
+V_{ab} &= 8.5714\ \mathrm{V} \\
+V_{a'b'} &= 4.2857\ \mathrm{V} \\
+V_{a''b''} &= 4.2857\ \mathrm{V}
+\end{aligned}
+\]
+
+\[V_{ab} = V_{a'b'} + V_{a''b''}\]
+
+\[8.5714\ \mathrm{V} = 4.2857\ \mathrm{V} + 4.2857\ \mathrm{V}\]
+
+Por lo tanto queda demostrado.
 
 \section{Para el circuito de la figura \ref{fig:circuito3_1}, desarrolle las siguientes ecuaciones}
 
@@ -203,9 +272,38 @@
 	\label{fig:circuito3_1}
 \end{figure}
 
+Para desarrollar las ecuaciones es necesario aplicar la ley de Kirchhoff de voltajes.
+
+En la malla izquierda:
+
+\[V_1 - V_2 = 0\]
+
+En la malla central:
+
+\[V_2 - V_3 - V_4 = 0\]
+
+En la malla derecha:
+
+\[V_4 - V_5 = 0\]
+
+Ahora para calcular \( \sum_{k=1}^{b} j_{k} V_{k} \) debemos de calcular la potencia absorvida para cada componente. Por lo que utilizando las ecuaciones de las mallas tenemos:
+
+\[ j_1 (V_1 - V_2) + j_2 (V_2 - V_3 - V_4) + j_3 (V_4 - V_5) = 0 \]
+
+\[j_1 V_1 - j_1 V_2 + j_2 V_2 - j_2 V_3 - j_2 V_4 + j_3 V_4 - j_3 V_5 = 0\]
+
+\[j_1 V_1 + V_2 (j_2 - j_1) - j_2 V_3 + V_4 (j_3 - j_2) - j_3 V_5 = 0\]
+
+Por lo tanto tenemos que:
+
+\[\
+\sum_{k=1}^{b} j_{k} V_{k} = j_1 V_1 + V_2 (j_2 - j_1) - j_2 V_3 + V_4 (j_3 - j_2) - j_3 V_5
+\]
+
+
+% \begin{thebibliography}{9}
 % \section{Bibliografía}
 % \renewcommand{\refname}{}
-% \begin{thebibliography}{9}
 %    \bibitem{} Dr. E. García, \textit{"Diseño Digital VLSI Repaso DDM"}, presentado en el curso de Diseño Digital VLSI, Ciudad de México, 2025.
 % \end{thebibliography}
 
