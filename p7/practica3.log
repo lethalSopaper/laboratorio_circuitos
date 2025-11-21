@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2025.11.4)  6 NOV 2025 22:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2025.11.4)  20 NOV 2025 21:38
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/home/hansmarcus/Desktop/clases/Circuitos/laboratorio_circuitos/p6/previo/previo5.tex
-(/home/hansmarcus/Desktop/clases/Circuitos/laboratorio_circuitos/p6/previo/previo5.tex
+**/home/hansmarcus/Desktop/clases/Circuitos/laboratorio_circuitos/p7/practica3.tex
+(/home/hansmarcus/Desktop/clases/Circuitos/laboratorio_circuitos/p7/practica3.tex
 LaTeX2e <2022-11-01> patch level 1
 L3 programming layer <2023-02-22> (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2022/07/02 v1.4n Standard LaTeX document class
@@ -687,20 +687,26 @@ File: lstlang1.sty 2023/02/27 1.9 listings language file
 \c@biblioi=\count334
 \enitdp@biblio=\count335
 \@indexfile=\write4
-\openout4 = `previo5.idx'.
+\openout4 = `practica3.idx'.
 
 
-Writing index file previo5.idx
+Writing index file practica3.idx
 (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2023-01-16 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count336
 \l__pdf_internal_box=\box85
-) (./previo5.aux
+) (./practica3.aux
 
-LaTeX Warning: Label `fig:circuito1_1' multiply defined.
+LaTeX Warning: Label `fig:circuito' multiply defined.
+
+
+LaTeX Warning: Label `fig:circuito' multiply defined.
+
+
+LaTeX Warning: Label `fig:circuito' multiply defined.
 
 )
-\openout1 = `previo5.aux'.
+\openout1 = `practica3.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 92.
 LaTeX Font Info:    ... okay on input line 92.
@@ -776,16 +782,16 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
 Package hyperref Info: Link coloring ON on input line 92.
- (./previo5.out) (./previo5.out)
+ (./practica3.out) (./practica3.out)
 \@outlinefile=\write5
-\openout5 = `previo5.out'.
+\openout5 = `practica3.out'.
 
-<./img//escudoUNAM.png, id=43, 803.0pt x 902.37125pt>
+<./img//escudoUNAM.png, id=47, 803.0pt x 902.37125pt>
 File: ./img//escudoUNAM.png Graphic file (type png)
 <use ./img//escudoUNAM.png>
 Package pdftex.def Info: ./img//escudoUNAM.png  used on input line 98.
 (pdftex.def)             Requested size: 113.81102pt x 127.88701pt.
-<./img//escudoFI.png, id=45, 355.3275pt x 426.59375pt>
+<./img//escudoFI.png, id=49, 355.3275pt x 426.59375pt>
 File: ./img//escudoFI.png Graphic file (type png)
 <use ./img//escudoFI.png>
 Package pdftex.def Info: ./img//escudoFI.png  used on input line 102.
@@ -793,221 +799,54 @@ Package pdftex.def Info: ./img//escudoFI.png  used on input line 102.
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc} <./img//escudoUNAM.png> <./img//escudoFI.png>]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 135.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 135.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 135.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 135.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 135.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 135.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 135.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 135.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 135.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\approx' on input line 135.
-
-<./img//circuito1_1.png, id=56, 427.5975pt x 188.95593pt>
-File: ./img//circuito1_1.png Graphic file (type png)
-<use ./img//circuito1_1.png>
-Package pdftex.def Info: ./img//circuito1_1.png  used on input line 139.
-(pdftex.def)             Requested size: 300.29344pt x 132.70073pt.
-<./img//circuito1_p1_edited.png, id=57, 457.71pt x 493.0922pt>
-File: ./img//circuito1_p1_edited.png Graphic file (type png)
-<use ./img//circuito1_p1_edited.png>
-Package pdftex.def Info: ./img//circuito1_p1_edited.png  used on input line 148.
-(pdftex.def)             Requested size: 250.24199pt x 269.5839pt.
+<./img//circuito1.png, id=59, 491.58656pt x 235.63031pt>
+File: ./img//circuito1.png Graphic file (type png)
+<use ./img//circuito1.png>
+Package pdftex.def Info: ./img//circuito1.png  used on input line 160.
+(pdftex.def)             Requested size: 400.38872pt x 191.92374pt.
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.166 \(
-        V_{R_2} = E_1 + V_{R_6}\) [1 <./img//circuito1_1.png (PNG copy)> <./img//circuito1_p1_edited.png>] [2] [3]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 323.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 323.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 323.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 323.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 323.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 323.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 323.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 323.
-
-<./img//circuito1_2.png, id=105, 370.38374pt x 198.7425pt>
-File: ./img//circuito1_2.png Graphic file (type png)
-<use ./img//circuito1_2.png>
-Package pdftex.def Info: ./img//circuito1_2.png  used on input line 327.
-(pdftex.def)             Requested size: 300.29344pt x 161.1352pt.
-[4 <./img//circuito1_2.png (PNG copy)>]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 381.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 381.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 381.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 381.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 381.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 381.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 381.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 381.
-
-<./img//circuito1_3.png, id=113, 274.02374pt x 198.7425pt>
-File: ./img//circuito1_3.png Graphic file (type png)
-<use ./img//circuito1_3.png>
-Package pdftex.def Info: ./img//circuito1_3.png  used on input line 385.
-(pdftex.def)             Requested size: 300.29344pt x 217.81075pt.
-[5] [6 <./img//circuito1_3.png (PNG copy)>]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 441.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 441.
-
-<./img//circuito2_1.png, id=126, 453.19313pt x 184.43906pt>
-File: ./img//circuito2_1.png Graphic file (type png)
-<use ./img//circuito2_1.png>
-Package pdftex.def Info: ./img//circuito2_1.png  used on input line 445.
-(pdftex.def)             Requested size: 300.29344pt x 122.2114pt.
-[7 <./img//circuito2_1.png (PNG copy)>]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 480.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 480.
-
-<./img//circuito2_2.png, id=133, 325.215pt x 184.43906pt>
-File: ./img//circuito2_2.png Graphic file (type png)
-<use ./img//circuito2_2.png>
-Package pdftex.def Info: ./img//circuito2_2.png  used on input line 484.
-(pdftex.def)             Requested size: 250.24199pt x 141.92282pt.
-[8 <./img//circuito2_2.png (PNG copy)>]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 511.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 511.
-
-<./img//circuito2_3.png, id=140, 298.86656pt x 175.40532pt>
-File: ./img//circuito2_3.png Graphic file (type png)
-<use ./img//circuito2_3.png>
-Package pdftex.def Info: ./img//circuito2_3.png  used on input line 516.
-(pdftex.def)             Requested size: 250.24199pt x 146.8684pt.
-[9 <./img//circuito2_3.png (PNG copy)>]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 531.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 531.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 531.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 531.
-
-<./img//circuito3_1.png, id=147, 631.60968pt x 235.63031pt>
-File: ./img//circuito3_1.png Graphic file (type png)
-<use ./img//circuito3_1.png>
-Package pdftex.def Info: ./img//circuito3_1.png  used on input line 561.
-(pdftex.def)             Requested size: 300.29344pt x 112.02982pt.
-[10] [11 <./img//circuito3_1.png (PNG copy)>] (./previo5.aux)
+l.168 	\item E
+              l factor de potencia de la carga eléctrica. [1{/usr/share/texlive/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc} <./img//circuito1.png>] [2]
+<./img//osciloscopio.png, id=84, 610.53094pt x 249.93375pt>
+File: ./img//osciloscopio.png Graphic file (type png)
+<use ./img//osciloscopio.png>
+Package pdftex.def Info: ./img//osciloscopio.png  used on input line 243.
+(pdftex.def)             Requested size: 400.38872pt x 163.91183pt.
+ [3 <./img//osciloscopio.png>]
+<./img//exp_2.png, id=95, 526.96875pt x 299.61937pt>
+File: ./img//exp_2.png Graphic file (type png)
+<use ./img//exp_2.png>
+Package pdftex.def Info: ./img//exp_2.png  used on input line 258.
+(pdftex.def)             Requested size: 400.38872pt x 227.65822pt.
+ [4 <./img//exp_2.png>]
+<./img//evidencias.png, id=104, 1096.095pt x 700.6175pt>
+File: ./img//evidencias.png Graphic file (type png)
+<use ./img//evidencias.png>
+Package pdftex.def Info: ./img//evidencias.png  used on input line 337.
+(pdftex.def)             Requested size: 400.38872pt x 255.93172pt.
+ [5] [6 <./img//evidencias.png>] [7] (./practica3.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package rerunfilecheck Info: File `previo5.out' has not changed.
-(rerunfilecheck)             Checksum: FF2E8191D4508D45B014B8AE21D79C50;3714.
+Package rerunfilecheck Info: File `practica3.out' has not changed.
+(rerunfilecheck)             Checksum: DBDA97E6AE63297FB3CFE00F94EA9C4C;1084.
  ) 
 Here is how much of TeX's memory you used:
- 44184 strings out of 476041
- 1024812 string characters out of 5793174
- 1866388 words of memory out of 6000000
- 64055 multiletter control sequences out of 15000+600000
- 521466 words of font info for 54 fonts, out of 8000000 for 9000
+ 44198 strings out of 476041
+ 1025547 string characters out of 5793174
+ 1860388 words of memory out of 6000000
+ 64075 multiletter control sequences out of 15000+600000
+ 522208 words of font info for 53 fonts, out of 8000000 for 9000
  1137 hyphenation exceptions out of 8191
- 84i,8n,80p,640b,639s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sfrm2488.pfb>
-Output written on previo5.pdf (12 pages, 533390 bytes).
+ 84i,9n,80p,835b,654s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sfrm2488.pfb>
+Output written on practica3.pdf (8 pages, 2552373 bytes).
 PDF statistics:
- 239 PDF objects out of 1000 (max. 8388607)
- 178 compressed objects within 2 object streams
- 39 named destinations out of 1000 (max. 500000)
- 135 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 197 PDF objects out of 1000 (max. 8388607)
+ 144 compressed objects within 2 object streams
+ 34 named destinations out of 1000 (max. 500000)
+ 123 words of extra memory for PDF output out of 10000 (max. 10000000)
 
